@@ -17,7 +17,7 @@ The important takeaway here is, by following this guide, you'll lay down a solid
 *This documentation is based on the deperecated project:* https://github.com/Azure/AzureStackHCI-EvalGuide
 
 A full self-paced deployment guide for evaluating Azure Stack HCI is now available from the Azure Docs on Microsoft Learn:
-https://learn.microsoft.com/en-gb/azure-stack/hci/guided-quick-deploy-eval?tabs=global-admin
+https://learn.microsoft.com/en-gb/azure-stack/hci/guided-quick-deploy-eval
 
 ----
 **[Click Here to jump to the Deployment Workflow](#deployment-Workflow)**
