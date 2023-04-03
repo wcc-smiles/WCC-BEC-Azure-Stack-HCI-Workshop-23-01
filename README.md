@@ -45,7 +45,7 @@ To remove the requirement for validated hardware *([Azure Stack HCI Catalog](htt
 
 The following illustration intends to visualise this concept.
 
-![Nested virtualization architecture](Assets/wcc-smiles-ashci-nestedvirtualization-d00.svg)
+![Nested virtualization architecture](https://github.com/wcc-smiles/WCC-BEC-Azure-Stack-HCI-Workshop-01/blob/main/Assets/wcc-smiles-ashci-nestedvirtualization-d00.svg)
 
 The preceding illustration shows that *Level 0* is a physical layer, that contains the virtualization host(s) hardware, onto which a hypervisor is installed; this host level hypervisor creates the *level 1* Virtualization platform; this utilizes Azure's Hardware and Azure's Hyper-V platform to create VMs.
 
@@ -64,7 +64,7 @@ You will deploy a **single Azure IaaS VM** running Windows Server 2019 to act as
 To reiterate, the whole configuration will run **inside the single Azure IaaS VM**.
 
 The following illustration intends to visualize what will be implemented:
-![Architecture diagram for Azure Stack HCI nested in Azure](Assets/architecture-vms.png)
+![Architecture diagram for Azure Stack HCI nested in Azure](https://github.com/wcc-smiles/WCC-BEC-Azure-Stack-HCI-Workshop-01/blob/main/Assets/architecture-vms.png)
 
 ### Storage Spaces Direct
 
