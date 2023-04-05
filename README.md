@@ -68,14 +68,12 @@ The following illustration intends to visualize what will be implemented:
 
 ### Storage Spaces Direct
 
-This is the storage-virtialization tecchnology built-in to Azure Stack HCI.
-
-Using Azure Stack HCI servers is the recommended approach for deploying Storage Spaces Direct on a cluster of physical servers; it is also currently still available for deployment on the Data Center editions of Windows Server OS (*...but for how long?*)
-
-Learn more here: https://learn.microsoft.com/en-us/azure-stack/hci/concepts/storage-spaces-direct-overview
+This is the storage-virtialization tecchnology built-in to Azure Stack HCI. Using Azure Stack HCI servers is the recommended approach for deploying Storage Spaces Direct on a cluster of physical servers; it is also currently still available for deployment on the Data Center editions of Windows Server OS (*...but for how long?*)
 
 The following illustration intends to visualize the Storage Spaces Direct architecture:
 ![Storage Spaces Direct Deployment methods](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/wac_cluster_type_ga.png)
+
+Learn more here: https://learn.microsoft.com/en-us/azure-stack/hci/concepts/storage-spaces-direct-overview
 
 ### Managing Azure Stack HCI VMs
 
