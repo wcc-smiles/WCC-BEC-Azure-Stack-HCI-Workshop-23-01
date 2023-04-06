@@ -318,13 +318,15 @@ The reason only one NIC is highlighted, is because this is the only NICs that ha
 
 8. On the **RDMA** page in a nested environment, you'll be presented with an error if you tick the box, so Click **Next**.
 
-10. On the **Define networks** page. One of the NICs have been claimed by the Management NIC. The remaining NICs will be shown in the table. 
+9. On the **Define networks** page. One of the NICs have been claimed by the Management NIC. The remaining NICs will be shown in the table. 
 
-12. Click **Apply and test**, Windows Admin Center tests network connectivity.
+![Define Networks in the Create Cluster wizard](https://github.com/wcc-smiles/WCC-BEC-Azure-Stack-HCI-Workshop-01/blob/main/Assets/2023-04-06%2011_58_58-AzSHCIHost001%20(1)%20-%20azshcihost001ry2eew.eastus.cloudapp.azure.com_3389%20-%20Remote%20.png "Define Networks in the Create Cluster wizard")
+
+10. Click **Apply and test**, Windows Admin Center tests network connectivity.
 
 **Note: This will take approx 1-2 minutes**
 
-12. Once changes have been successfully applied, Click **Next: Clustering**.
+11. Once changes have been successfully applied, Click **Next: Clustering**.
 
 ### Clustering ###
 In this section we create the local cluster.
