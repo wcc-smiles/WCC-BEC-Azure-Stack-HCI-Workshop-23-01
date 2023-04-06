@@ -92,11 +92,6 @@ This Nested Virtualization environment as outlined in previous architecture has 
 
 This aproach allows you to focus on the learning aspects that are of value and specific to Azure Stack HCI rather than spending time deploying underlying pre-req infrastructure that has little relative learning value.
 
-## Workshop Outline
-
-The workshop will follow the outline shown in the following image:
-![Workshop Outline](https://github.com/wcc-smiles/WCC-BEC-Azure-Stack-HCI-Workshop-01/blob/main/Assets/wcc-sm-BEC-ASHCI-Workshop-Schedule-d01.svg)
-
 ---------
 ## Azure Resources Created & Costs
 
