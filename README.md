@@ -449,7 +449,7 @@ These steps are performed in **Windows Admin Center**.
 
 2. On the left hand navigation, under **Cluster Resources** select **Volumes**.  The central **Volumes** page shows you should have a single volume currently.
 3. On the Volumes page, select the **Inventory** tab, and then select **Create**.
-4. In the **Create volume** pane, enter **Volume01** for the volume name, and leave **Resiliency** as **Two-way mirror**.
+4. In the **Create volume** pane, Leave **Volume01** for the volume name, and leave **Resiliency** as **Two-way mirror**.
 5. In Size on HDD, specify **20GB** for the size of the volume, then Click **Create**.
 
 ![Create a volume on Azure Stack HCI](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media//wac_vm_storage_ga.png "Create a volume on Azure Stack HCI")
