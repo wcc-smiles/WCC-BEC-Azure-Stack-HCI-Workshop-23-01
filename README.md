@@ -488,7 +488,7 @@ In this step, you'll deploy a VM using Windows Admin Center.
 
 ### Create the virtual machine ###
 1. You should still be in **Windows Admin Center** for the next steps.
-2. On the left hand navigation, under **Compute** select **Virtual machines**.  The central **Virtual machines** page shows you have no virtual machines deployed currently.
+2. On the left hand navigation, under **Cluster Resources** select **Virtual machines**. The **Virtual machines** page shows you have no virtual machines deployed currently.
 3. On the **Virtual machines** page, from the **Inventory** tab, and then select **Add** -> **New**.
 4. In the **New virtual machine** pane, enter the following pieces of information:
 
@@ -498,7 +498,7 @@ In this step, you'll deploy a VM using Windows Admin Center.
     * Path: **C:\ClusterStorage\Volume01** (*The volume you created in previous steps*)
     * Virtual processors: **1**
     * Startup memory (GB): **0.5**
-    * Network: **ComputeSwitch**
+    * Network: **ConvergedSwitch**
     * Storage: Click **Add** then **Create an empty virtual hard disk** and set size to **5GB**
     * Operating System: **Install an operating system later**
     * Click **Create**
