@@ -466,10 +466,7 @@ These steps are performed in **Windows Admin Center**.
 During the **Create volume** wizard, there was the option to enable deduplication and compression at creation time; however you should be aware of how to enable it for existing volumes.
 
 1. In **Windows Admin Center**, on the **Volumes** page, select the **Inventory** tab, and then select your **Volume01** volume.
-2. On the **Volume Volume01** pane, you'll see a UI toggle control to enable **deduplication and compression**.  Click to enable it, and Click **Start**.
-
-![Enable deduplication on volume](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/wac_enable_dedup_ga.png "Enable deduplication on volume")
-
+2. On the **Volume Volume01** pane, you'll see a UI toggle control to enable **Deduplication**.  Click to enable it, and Click **Start**.
 3. In the **Enable deduplication** pane, use the drop-down to select **Hyper-V** then click **Enable deduplication**. This should be enabled quickly, as there's no files on the volume.
 
 **NOTE** - You'll notice there there are 3 options; **Default, Hyper-V and Backup**.  
