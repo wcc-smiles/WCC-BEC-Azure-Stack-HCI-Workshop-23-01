@@ -429,11 +429,116 @@ Information is periodically synced between the Azure resource and the on-premise
 
 You're now ready to move on to the next step of **[Explore the management and operation of your Azure Stack HCI environment]**
 
-**Complete the steps in the following Microsoft documentation**:
-* https://learn.microsoft.com/en-gb/azure-stack/hci/guided-quick-deploy-eval?tabs=global-admin&tutorial-step=7
-* https://learn.microsoft.com/en-gb/azure-stack/hci/guided-quick-deploy-eval?tabs=global-admin&tutorial-step=8
+----------------
+
+### Part 2 - Explore the management and operation of your Azure Stack HCI environment:
+In this section we  can now begin to explore some of the additional capabilities within Azure Stack HCI and the Windows Admin Center.  
+
+We'll cover a few recommended activities below, to expose you to some of the key elements of the Windows Admin Center, but for the rest, we'll [direct you over to the official documentation](https://docs.microsoft.com/en-us/azure-stack/hci/ "Azure Stack HCI documentation") and the Microsoft Learn content: https://docs.microsoft.com/en-gb/learn/modules/manage-azure-stack-hci-virtual-machine-workloads/2-virtual-machines
+
+
+Create volumes for VMs
+-----------
+In this step, you'll explore **creating a volume** on an Azure Stack HCI cluster by using **Windows Admin Center**, and **Enable data deduplication and compression**. 
+
+### Create a two-way mirror volume ###
+These steps are performed in **Windows Admin Center**.
+
+1. Once logged into **Windows Admin Center**, Click on your previously deployed cluster, **azshciclus.contoso.com**.
+
+![Create a volume on Azure Stack HCI 21H2](https://github.com/wcc-smiles/Azure-Stack-HCI-Workshop-Draft02/blob/main/Assets/2022-07-14%2009_16_49-AzSHCIHost001%20(1)%20-%20azshcihost001wcbdte.eastus.cloudapp.azure.com_3389%20-%20Remote%20.png)
+
+2. On the left hand navigation, under **Storage** select **Volumes**.  The central **Volumes** page shows you should have a single volume currently.
+3. On the Volumes page, select the **Inventory** tab, and then select **Create**.
+4. In the **Create volume** pane, enter **Volume01** for the volume name, and leave **Resiliency** as **Two-way mirror**.
+5. In Size on HDD, specify **20GB** for the size of the volume, then Click **Create**.
+
+![Create a volume on Azure Stack HCI](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media//wac_vm_storage_ga.png "Create a volume on Azure Stack HCI")
+
+6. Creating the volume can take a few minutes. Notifications in the upper-right will let you know when the volume is created. The new volume appears in the Inventory list.
+
+![Volume created on Azure Stack HCI](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/wac_vm_storage_deployed_ga.png "Volume created on Azure Stack HCI")
+
+### Turn on deduplication and compression ###
+During the **Create volume** wizard, there was the option to enable deduplication and compression at creation time; however you should be aware of how to enable it for existing volumes.
+
+1. In **Windows Admin Center**, on the **Volumes** page, select the **Inventory** tab, and then select your **Volume01** volume.
+2. On the **Volume Volume01** pane, you'll see a UI toggle control to enable **deduplication and compression**.  Click to enable it, and Click **Start**.
+
+![Enable deduplication on volume](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/wac_enable_dedup_ga.png "Enable deduplication on volume")
+
+3. In the **Enable deduplication** pane, use the drop-down to select **Hyper-V** then click **Enable deduplication**. This should be enabled quickly, as there's no files on the volume.
+
+**NOTE** - You'll notice there there are 3 options; **Default, Hyper-V and Backup**.  
+
+If you're interested in learning more about Deduplication in Azure Stack HCI, you should [refer to the documentation on these usage types](https://docs.microsoft.com/en-us/windows-server/storage/data-deduplication/understand#usage-type "Deduplication usage types")
+
+Whilst we deployed the volume using the Windows Admin Center, you can also do the same through PowerShell.
+If you're interested in taking that approach, [check out the official docs that walk you through that process](https://docs.microsoft.com/en-us/azure-tack/hci/manage/create-volumes "Official documentation for creating volumes")
+
+**You've now successfully created a volume**
 
 ----------------
+
+Deploy a virtual machine
+-----------
+In this step, you'll deploy a VM using Windows Admin Center.
+
+**IMPORTANT NOTE**  **You MUST have sucessfully completed the registration with Azure to create VMs**
+
+### Create the virtual machine ###
+1. You should still be in **Windows Admin Center** for the next steps.
+2. On the left hand navigation, under **Compute** select **Virtual machines**.  The central **Virtual machines** page shows you have no virtual machines deployed currently.
+3. On the **Virtual machines** page, from the **Inventory** tab, and then select **Add** -> **New**.
+4. In the **New virtual machine** pane, enter the following pieces of information:
+
+    * Name: **VM001**
+    * Generation: **Generation 2** (*Recommended*)
+    * Host: **Leave as recommended**
+    * Path: **C:\ClusterStorage\Volume01** (*The volume you created in previous steps*)
+    * Virtual processors: **1**
+    * Startup memory (GB): **0.5**
+    * Network: **ComputeSwitch**
+    * Storage: Click **Add** then **Create an empty virtual hard disk** and set size to **5GB**
+    * Operating System: **Install an operating system later**
+    * Click **Create**
+
+5. The creation process will take a few moments, and once complete, **VM001** should show within the **Virtual machines view**.
+6. Select the **VM** and then click **Power** -> **Start** - within moments, the VM should be running.
+
+![VM001 up and running](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/wac_vm001_ga.png "VM001 up and running")
+
+7. Click on **VM001** to view the properties and status for this running VM.
+8. Click on **Connect** and tick the box **Automatically connect with the certficate presented by this machine** and then click **Connect**.
+
+You may get a **VM Connect** prompt:
+
+![Connect to VM001](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/vm_connect_ga.png "Connect to VM001")
+
+9. From **Settings** and in the **Remote Desktop** pane, click on **Allow remote connections to this computer**, then **Save**.
+10. Click the **Back** button in your browser to return to the **VM001** view, then Click **Connect**, and enter credentails; and when prompted with the certificate prompt, Click **Connect** and enter appropriate credentials.
+11. There's **no operating system** installed here, so it should show a **UEFI boot summary**, but the VM is running successfully.
+12. Click **Disconnect**.
+
+**You've now successfully created a VM using the Windows Admin Center**
+
+----------------
+
+### Live migrate the virtual machine ###
+The final step we'll cover is using Windows Admin Center to live migrate VM001 from it's current node, to an alternate node in the cluster.
+
+1. Still within the **Windows Admin Center** , under **Compute**, Click on **Virtual machines**.
+2. On the **Virtual machines** page, select the **Inventory** tab and select your **VM001**.
+3. Make a note of which hist in the cluster the VM is currently running on.
+4. Click **Manage**.  You'll notice you can Clone, Domain Join and also Move the VM. Click **Move**.
+
+![Start Live Migration using Windows Admin Center](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media/wac_move_ga.png "Start Live Migration using Windows Admin Center")
+
+5. In the **Move Virtual Machine** pane, ensure **Failover Cluster** is selected, and leave the default **Best available cluster node** to allow Windows Admin Center to pick where to migrate the VM to, then Click **Move**.
+6. The live migration will then begin, and within a few seconds, the VM should be running on a different node.
+7. Review the new **host** this is now running on.
+
+**You've now successfully live migrated a VM between cluster nodes using the Windows Admin Center**
 
 -----------
 ## Congratulations!
@@ -441,7 +546,7 @@ You're now ready to move on to the next step of **[Explore the management and op
 You've reached the end of the evaluation guide.  In this guide you have:
 
 * Created an Azure Stack HCI cluster and registered with Azure for billing
-* Used the Windows Admin Center to create and modify volumes, then deploy and migrate a virtual machine.
+* Used the Windows Admin Center to create and modify volumes, then deploy a virtual machine.
 
 **Read the information referenced in the following Microsoft documentation**:
 * https://learn.microsoft.com/en-gb/azure-stack/hci/guided-quick-deploy-eval?tabs=global-admin&tutorial-step=9
