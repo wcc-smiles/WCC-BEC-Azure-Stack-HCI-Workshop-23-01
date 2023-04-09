@@ -230,7 +230,7 @@ Login using the domain account:
 
 Set the **Privacy and security** settings to allow **Pop-ups and redirects** from the **Site settings**
 
-Set the URL **https://admincenter.contoso.com** under the settings **Allowed to send pop-ups and use recirects**
+Set the URL **https://admincenter.contoso.com** under the settings **Allowed to send pop-ups and use redirects**
 
 **NOTE** if Chrome is not set as the default browser type change this in the *Settings Default Apps*
 
