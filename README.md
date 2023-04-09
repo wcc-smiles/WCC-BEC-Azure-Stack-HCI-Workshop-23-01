@@ -226,7 +226,7 @@ Login using the domain account:
 
 ![Creating a cluster](https://github.com/wcc-smiles/Azure-Stack-HCI-Workshop-Draft02/blob/main/Assets/2022-07-10%2014_19_01-AzSHCIHost001%20(1)%20-%20azshcihost001ukdftw.eastus.cloudapp.azure.com_3389%20-%20Remote%20.png)
 
-2. From the desktop of the **AdminCenter** VM, Click the **Windows Admin Center** chrome browser desktop shortcut.
+2. From the desktop of the **AdminCenter** VM, Click the **Windows Admin Center** chrome browser desktop shortcut; Set the **Privacy and security** settings to allow **Pop-ups and redirects** from the **Site settings**. Set the URL **https://admincenter.contoso.com** under the settins **Allowed to send pop-ups and use recirects**
 
 **NOTE** if Chrome is not set as the default browser type change this in the *Settings Default Apps*
 
