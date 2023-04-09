@@ -423,9 +423,8 @@ Information is periodically synced between the Azure resource and the on-premise
 ### Congratulations! ###
 **You've now registered your Azure Stack HCI cluster**
 
-----------------
-
-### Next Steps ###
+Next Steps
+-----------
 
 You're now ready to move on to the next step of **[Explore the management and operation of your Azure Stack HCI environment]**
 
