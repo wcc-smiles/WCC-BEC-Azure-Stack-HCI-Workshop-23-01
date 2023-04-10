@@ -208,25 +208,16 @@ Here are the major steps in the **Create Cluster Wizard** in *Windows Admin Cent
 ### Cluster type ###
 Not only does Azure Stack HCI support a cluster in a single site (or a **Local Cluster** as we'll refer to it going forward) consisting of between 2 and 16 nodes, but, also supports a **Stretch Cluster**, where a single cluster can have nodes distrubuted across two sites.
 
-* If you have 2 Azure Stack HCI nodes, you will be able to create a **local cluster**
+* With 2 Azure Stack HCI nodes, you will be able to create a **local cluster**
 * If you have 4 Azure Stack HCI nodes, you will have a choice of creating either a **local cluster** or a **stretch cluster**
 
-In this workshop, we'll be focusing on deploying a **Local Cluster**.  You can [check out the official docs for Stretched Clusters](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/stretched-clusters "Stretched clusters overview on Microsoft Docs")
+In this workshop, we'll be focusing on deploying a 2-node **Local Cluster**.  You can [check out the official docs for Stretched Clusters](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/stretched-clusters "Stretched clusters overview on Microsoft Docs")
 
 ### Cluster Wizard Steps ###
 
 This section will walk through the key steps for you to set up the Azure Stack HCIcluster with the Windows Admin Center:
 
-1. From **AzSHCIHost001**, connect to the **AdminCenter** VM via **RDP** by clicking on the **AdminCenter** RDP shortcut on your desktop. 
-
-Login using the domain account: 
-
-* **Username:** Contoso\Administrator  
-* ***Password:** Password01
-
-![Creating a cluster](https://github.com/wcc-smiles/Azure-Stack-HCI-Workshop-Draft02/blob/main/Assets/2022-07-10%2014_19_01-AzSHCIHost001%20(1)%20-%20azshcihost001ukdftw.eastus.cloudapp.azure.com_3389%20-%20Remote%20.png)
-
-2. From the desktop of the **AdminCenter** VM, Click the **Windows Admin Center** chrome browser desktop shortcut.
+1. From the desktop of the **AdminCenter** VM, Click the **Google Chrome** browser desktop shortcut.
 
 Set the **Privacy and security** settings to allow **Pop-ups and redirects** from the **Site settings**
 
@@ -234,12 +225,16 @@ Set the URL **https://admincenter.contoso.com** under the settings **Allowed to 
 
 **NOTE** if Chrome is not set as the default browser type change this in the *Settings Default Apps*
 
+2. From **AzSHCIHost001**, connect to the **AdminCenter VM** via **RDP** by clicking on the **AdminCenter** RDP shortcut on your desktop. 
+
 Login to **Windows Admin Center** using the domain account:
 
 * **Username:** Contoso\Administrator  
 * **Password:** Password01
 
-3. Once logged into Windows Admin Center, if you receive a notification that **extension catalogs are being updated** then wait for this to complete; otherwise, under **All connections**, Click **Add**.
+![Creating a cluster](https://github.com/wcc-smiles/Azure-Stack-HCI-Workshop-Draft02/blob/main/Assets/2022-07-10%2014_19_01-AzSHCIHost001%20(1)%20-%20azshcihost001ukdftw.eastus.cloudapp.azure.com_3389%20-%20Remote%20.png)
+
+3. Once logged into **Windows Admin Center WAC**, if you receive a notification that **extension catalogs are being updated** then wait for this to complete, and WAC to relaunch; otherwise, under **All connections**, Click **Add**.
 
 4. On the **Add or create resources** screen, from **Server clusters**, Click **Create new** to open the **Cluster Creation wizard**.
 
