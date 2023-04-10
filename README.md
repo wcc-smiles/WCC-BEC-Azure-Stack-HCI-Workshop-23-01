@@ -173,7 +173,7 @@ Select **Skip for now** on the dialog box that appears when you sign into the Az
 
 1. From the portal navigate to **Resource Groups** and Click on your **allocated Resource Group** named: **user1[-10]-rg**. 
 
-2. Click on your **allocated virtual machine** named: **AzSHCIHost001**. Once you're on the Overview blade for your VM, along the top of the blade, click on **Connect**.
+2. Click on your **allocated virtual machine** named: **AzSHCIHost001**. Once you're on the **Overview** blade for your **VM**, along the top of the blade, click on **Connect**.
 
 ![Connect to a virtual machine in Azure](https://github.com/Azure/AzureStackHCI-EvalGuide/blob/main/deployment/media//connect_to_vm.png "Connect to a virtual machine in Azure")
 
