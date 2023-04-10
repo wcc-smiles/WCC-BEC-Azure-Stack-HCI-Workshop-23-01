@@ -165,7 +165,7 @@ You need to connect into the host VM, using **Remote Desktop**.
 If you're not already logged into the Azure portal, visit https://portal.azure.com/ and login with the credentials provided.
 
 * user1[-10]@milesbettersolutions.onmicrosoft.com (*this user has the following roles: tenant global admin and subscription owner*)
-* 3AUh2@R2sOs9	
+* H#9%H3bDuy15
 
 **NOTE**
 Select **Skip for now** on the dialog box that appears when you sign into the Azure Portal.
