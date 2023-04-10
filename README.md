@@ -162,7 +162,7 @@ A pre-created **nested virtualization** environment running on a **Single Azure 
 #### Connect to your Azure VM ###
 You need to connect into the host VM, using **Remote Desktop**. 
 
-If you're not already logged into the Azure portal, visit https://portal.azure.com/ and login with the credentials provided.
+Browse to https://portal.azure.com/ and login with the credentials below:
 
 * user1[-10]@milesbettersolutions.onmicrosoft.com (*this user has the following roles: tenant global admin and subscription owner*)
 * H#9%H3bDuy15
