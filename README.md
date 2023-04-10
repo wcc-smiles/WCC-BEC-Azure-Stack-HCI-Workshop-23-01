@@ -234,7 +234,7 @@ Login to **Windows Admin Center** using the domain account:
 
 ![Creating a cluster](https://github.com/wcc-smiles/Azure-Stack-HCI-Workshop-Draft02/blob/main/Assets/2022-07-10%2014_19_01-AzSHCIHost001%20(1)%20-%20azshcihost001ukdftw.eastus.cloudapp.azure.com_3389%20-%20Remote%20.png)
 
-3. Once logged into **Windows Admin Center WAC**, if you receive a notification that **extension catalogs are being updated** then wait for this to complete, and WAC to relaunch; otherwise, under **All connections**, Click **Add**.
+3. Once logged into **Windows Admin Center WAC**, if you receive a notification that **extension catalogs are being updated** then wait for this to complete, and WAC to relaunch; then, under **All connections**, Click **Add**.
 
 4. On the **Add or create resources** screen, from **Server clusters**, Click **Create new** to open the **Cluster Creation wizard**.
 
