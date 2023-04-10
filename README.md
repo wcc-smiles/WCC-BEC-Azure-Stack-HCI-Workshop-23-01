@@ -556,7 +556,7 @@ You've reached the end of the evaluation guide.  In this guide you have:
 You can now take the opportunity to explore further the capabilities that Azure Stack HCI can provide; a handful of useful links have been provided below to get you started.
 
 * [Azure Stack HCI Landing Page](https://azure.microsoft.com/en-us/products/azure-stack/hci "Azure Stack HCI Landing Page")
-* [Compare Azure Stack HCI hardware requirements](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/compare-windows-server "Azure Stack HCI hardware requirements")
+* [Compare Azure Stack HCI system requirements](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements "Azure Stack HCI system requirements")
 
 * [Compare Azure Stack HCI to Windows Server](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/compare-windows-server "Compare Azure Stack HCI to Windows")
 
