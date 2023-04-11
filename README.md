@@ -168,8 +168,8 @@ Browse to https://portal.azure.com/ and login with the allocated credentials bel
 * H#9%H3bDuy15
 
 **NOTE**
-Select **Skip for now** on the dialog box that appears when you sign into the Azure Portal.
-![Connect to a virtual machine in Azure](https://github.com/wcc-smiles/Azure-Stack-HCI-Workshop-Draft02/blob/main/Assets/2022-07-23%2016_50_03-Sent%20Items%20-%20Steve.Miles%40westcoastcloud.co.uk%20-%20Outlook.png "Connect to a virtual machine in Azure")
+Select **Ask Later** on the dialog box that appears when you sign into the Azure Portal.
+![Connect to a virtual machine in Azure](https://github.com/wcc-smiles/WCC-BEC-Azure-Stack-HCI-Workshop-01/blob/main/Assets/2023-04-11%2009_30_19-Sign%20in%20to%20Microsoft%20Azure.png "Connect to a virtual machine in Azure")
 
 1. From the portal navigate to **Resource Groups** and Click on your **allocated Resource Group** named: **user1[-10]-rg**. 
 
